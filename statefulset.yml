@@ -20,7 +20,7 @@ spec:
         # secret 
           envFrom:
             - secretRef:
-              name: bank-secret
+                name: bank-secret
         # resource
           resources:
             requests:
