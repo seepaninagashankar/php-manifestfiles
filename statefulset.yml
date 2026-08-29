@@ -5,11 +5,11 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLablels:
+    matchLabels:
       app: app-db
   template:
     metadata:
-      lablels:
+      labels:
         app: app-db
     spec:
       containers:
