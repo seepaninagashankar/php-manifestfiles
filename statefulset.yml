@@ -35,7 +35,7 @@ spec:
               mouthPath: /var/lib/mysql
       volumeClaimTemplates:
         - metadata:
-            name: mysql-data
+            name: pvc-1
           spec:
             accessModes:
               - ReadWriteOnce
