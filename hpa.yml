@@ -1,0 +1,18 @@
+apiversion: autoscaling/v2
+kind: HorizontalPodAutoScaler
+metadata:
+  name: bank-hpa
+spec:
+  scaleTargetRef:
+    apiversion: apps/v1
+    kind: Deployment
+    name: bank-deploy
+  minReplicas: 3
+  maxReplicas: 10
+  metrices:
+    - type: Resource
+      resource:
+        name: cpu
+        target: 
+          type: utilization
+          averageUtilization: 60

@@ -1,0 +1,11 @@
+apiversion: v1
+kind: Service
+metadata:
+  name: app-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: swiggy
+  ports:
+    - port: 80
+      targetPort: 80

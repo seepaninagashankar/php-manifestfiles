@@ -1,0 +1,44 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLablels:
+      app: swiggy
+  template:
+    metadata:
+      lablels:
+        app: swiggy
+    spec:
+      containers:
+        - name: cont1
+          image: nagashankar8916/eks2:appimg
+          ports:
+            - containerPort: 80
+        # config  
+          envFrom:
+            - ConfigMapRef:
+              name: bank-config
+        # resource
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits: 
+              cpu: "200m"
+              memory: "256Mi"
+        # probes
+          livenessProbe:
+            httpget:
+              path: /
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpget:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 5       
