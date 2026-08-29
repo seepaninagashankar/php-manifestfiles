@@ -20,7 +20,7 @@ spec:
         # config  
           envFrom:
             - ConfigMapRef:
-              name: bank-config
+                name: bank-config
         # resource
           resources:
             requests:
