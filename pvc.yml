@@ -1,7 +1,7 @@
 apiversion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name:pvc-1
+  name: pvc-1
 spec:
   storageClassName: gp2
   accessModes:
