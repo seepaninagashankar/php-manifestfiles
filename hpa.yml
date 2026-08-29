@@ -4,7 +4,7 @@ metadata:
   name: bank-hpa
 spec:
   scaleTargetRef:
-    apiversion: apps/v1
+    apiVersion: apps/v1
     kind: Deployment
     name: bank-deploy
   minReplicas: 3
