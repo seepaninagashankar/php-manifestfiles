@@ -9,10 +9,10 @@ spec:
     name: bank-deploy
   minReplicas: 3
   maxReplicas: 10
-  metrices:
+  metrics:
     - type: Resource
       resource:
         name: cpu
         target: 
-          type: utilization
+          type: Utilization
           averageUtilization: 60
