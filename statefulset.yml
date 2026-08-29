@@ -32,7 +32,7 @@ spec:
         #volume
           volumeMounts:
             - name: pvc-1
-              mountPath: /var/lib/mysql
+              mountPath: /usr/share/nginx/html
       volumes:
         - name: pvc-1
           persistentVolumeClaim:
