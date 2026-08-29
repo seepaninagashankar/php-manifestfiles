@@ -5,11 +5,11 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLablels:
+    matchLabels:
       app: swiggy
   template:
     metadata:
-      lablels:
+      labels:
         app: swiggy
     spec:
       containers:
@@ -19,7 +19,7 @@ spec:
             - containerPort: 80
         # config  
           envFrom:
-            - ConfigMapRef:
+            - configMapRef:
                 name: bank-config
         # resource
           resources:
