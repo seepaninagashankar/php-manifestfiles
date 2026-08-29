@@ -32,7 +32,7 @@ spec:
         #volume
           volumeMounts:
             - name: pvc-1
-              mouthPath: /var/lib/mysql
+              mountPath: /var/lib/mysql
       volumeClaimTemplates:
         - metadata:
             name: pvc-1
